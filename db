@@ -1,0 +1,13 @@
+CREATE DATABASE db_sistem;
+USE db_sistem;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Contoh menambahkan satu user (Passwordnya adalah: rahasia123)
+-- Hash di bawah ini dihasilkan dari fungsi password_hash() PHP
+INSERT INTO users (username, password) VALUES 
+('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
